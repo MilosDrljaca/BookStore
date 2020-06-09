@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BookStore.Model
 {
-    public class AplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public AplicationDbContext(DbContextOptions <AplicationDbContext> options ) :base(options)
+        public ApplicationDbContext(DbContextOptions <ApplicationDbContext> options ) :base(options)
         {
 
         }
