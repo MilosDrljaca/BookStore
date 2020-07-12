@@ -1,15 +1,41 @@
 ﻿@page
 @model BookStore.Pages.BookList.IndexModel
 
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 300;
+        }
 
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            color: #a9a9a9;
+        }
+        .form-control {
+            background-color: #056571;
+            color: white;
+        }
+
+        .border {
+            background-color: white;
+        }
+        .green {
+            background-color: #056571;
+            
+        }
+    </style>
+</head>
 <br />
 
 <div class="container row p-0 m-0">
     <div class="col-9">
-        <h2 class="text-info">Book list</h2>
+        <h2>Book list</h2>
     </div>
     <div class="col-3">
-        <a asp-page="Create" class="btn btn-info form-control">Create a new book</a>
+        <a asp-page="Create" class="btn form-control">Create a new book</a>
     </div>
 
     <div class="col-12 border p-3 mt-3">
@@ -42,11 +68,11 @@
                             <td>
                                 @Html.DisplayFor(m => item.ISBN)
                             </td>
-                            <td>
+                            <td align="center">
                                 <button asp-page-handler="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-sm">
                                     Delete
                                 </button>
-                                <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm text-white">Edit</a>
+                                <a asp-page="Edit" asp-route-id="@item.Id" class="btn green btn-sm text-white">Edit</a>
                             </td>
                         </tr>
                     }
@@ -60,7 +86,8 @@
     </div>
 
 
-    <div class="col-12" style="text-align:center">
+    <div class="col-12" style="text-align: center
+    ">
         <br />
         <span class="h3 text-info">OR</span>
         <br />

@@ -18,14 +18,14 @@ function loadDataTable() {
             {
                 "data": "id",
                 "render": function (data) {
-                    return `<div class="text-center">
-                    <a href="/BookList/Edit?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:70px;'>
-                    Edit
-                    </a>
-                    &nbsp;
+                    return `<div class="text-center">                                      
                     <a class='btn btn-danger text-white' style='cursor:pointer; width:70px;'
                     onclick=Delete('/api/book?id='+${data})>
                     Delete
+                    </a>
+                    &nbsp;
+                    <a href="/BookList/Edit?id=${data}" class='btn green text-white' style='cursor:pointer; width:70px;'>
+                    Edit
                     </a>
                     </div>`;
                 }, "width": "40%"
@@ -43,7 +43,7 @@ function Delete(url) {
         title: "Are you sure?",
         text: "Once deleted, you will not be able to recover",
         icon: "warning",
-        buttons:true,
+        buttons: true,
         dangerMode: true
     }).then((willDelete) => {
         if (willDelete) {
