@@ -1,4 +1,4 @@
-# Bookstore
+# Bookstore - Asp.Net core Razor pages application
 
 Basic CRUD operation application developed for practicing multilayered software development. Developed layers of Models, Controllers, and Pages and also Javascript functionalities.
 
